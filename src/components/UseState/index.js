@@ -9,18 +9,13 @@ const UseState = () => {
       <h1>UseState Component</h1>
       <button
         onClick={() => {
-          return setTheme("dark");
-        }}
-      >
-        Dark
-      </button>
-      <button
-        onClick={() => {
+          if (theme === "light") return setTheme("dark");
           return setTheme("light");
         }}
       >
-        Light
+        Theme
       </button>
+
       <h1>{count}</h1>
       <button
         onClick={() => {
